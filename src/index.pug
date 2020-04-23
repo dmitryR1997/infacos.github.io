@@ -1,0 +1,44 @@
+extends ~common/templates/layout/main
+
+include ~components/section/mixin
+
+block variables
+	- URL = 'https://Infocos.ru'
+	- TITLE = 'Infocos'
+	- DESCRIPTION = 'Infocos'
+	- IMAGE = '/images/og/index.png'
+
+block main-body
+	include ~common/blocks/header/index
+	.main-sections
+		+section({mods: ['light-blue'], id: 'section-banner'})
+			include ~common/blocks/section-banner/index
+
+		+section({mods: ['light-blue-gradient'], id: 'section-tv-without-equipment'})
+			include ~common/blocks/section-tv-without-equipment/index
+
+		+section({id: 'section-advants'})
+			include ~common/blocks/section-advants/index
+
+		+section({id: 'section-gift' })
+			include ~common/blocks/section-gift/index
+
+		+section({ id: 'section-health-service' })
+			include ~common/blocks/section-health-service/index
+
+		+section({ id: 'section-news' })
+			include ~common/blocks/section-news/index
+
+		+section({ id: 'section-documents' })
+			include ~common/blocks/section-documents/index
+
+		+section({ id: 'section-tv-select' })
+			include ~common/blocks/section-tv-select/index
+
+		+section({ id: 'section-contacts' })
+			include ~common/blocks/section-contacts/index
+
+		+section({ id: 'section-footer' })
+			include ~common/blocks/section-footer/index
+
+block append scripts

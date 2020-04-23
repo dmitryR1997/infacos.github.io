@@ -1,0 +1,27 @@
+.section-contacts.js-section-documents
+	.l-container
+		.l-row.justify-content-between
+			.l-col-sm-6
+				h2.section-contacts__title Напишите нам
+
+				form(action="" method="POST").contact-form
+					.contact-form__item
+						input(type="text" placeholder="Ваше имя")
+					.contact-form__item
+						input(type="text" placeholder="Телефон или почта")
+					.contact-form__item
+						textarea(placeholder="Ваш вопрос" rows="6")
+					.contact-form__item
+						+button('') Отправить
+
+			.l-col-sm-6
+				.contacts-card
+					+image({src: '/images/logo/header-logo.svg', class: 'contacts-card__logo'})
+
+					.contacts-card__address Москва, улица Малая Калужская,<br>дом 15, строение 16, офис 410
+					.contacts-card__tel
+						a(href="tel:+74991860561") +7 499 186-05-61
+					.contacts-card__help-service Абонентская служба:<br> 9:00–20:00 (Пн–Пт; Сб–Вс Выходной)
+					.contacts-card__help-service Аварийная служба:<br> Круглосуточно
+					.contacts-card__email
+						a(href="to:info@infocos.ru") info@infocos.ru

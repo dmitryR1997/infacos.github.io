@@ -1,0 +1,31 @@
+.section-gift {
+  &__body {
+    position: relative;
+    background-color: #D0DBED;
+    border-radius: 30px;
+    padding: 56px 50px;
+  }
+
+  &__title {
+    margin: 32px 0 0;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+  }
+
+  &__join {
+    margin: 38px 0 0;
+  }
+
+  .l-container {
+    max-width: 1280px
+  }
+}
+
+

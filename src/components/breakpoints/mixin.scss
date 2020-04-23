@@ -1,0 +1,8 @@
+@import "~common/styles/variables/breakpoints";
+@import "~common/styles/mixins/media";
+
+@mixin breakpoint($name) {
+  @include media-min(map_get($breakpoints, $name)) {
+    @content;
+  }
+}

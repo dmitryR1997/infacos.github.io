@@ -1,0 +1,78 @@
+@import "~components/breakpoints/mixin";
+
+.section-faq {
+  .owl-stage-outer {
+    overflow: visible;
+  }
+  .owl-stage {
+    display: flex;
+    align-items: stretch;
+  }
+  .owl-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    & > * {
+      flex: 1 0 auto;
+    }
+    .section-faq__panel {
+      margin: 0;
+    }
+  }
+  &__panel {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: #fff;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.01);
+    border-radius: 0 30px;
+    padding: 30px;
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 20px;
+
+    &__head {
+      flex: 0 0 auto;
+    }
+    &__body {
+      flex: 1 1 auto;
+    }
+    &__footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    &__img {
+      font-size: 0;
+      line-height: 0;
+      margin-bottom: -30px;
+    }
+  }
+  &__head {
+    margin-bottom: 40px;
+  }
+  &__footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  @include breakpoint(xs) {
+    &__more {
+      max-width: 210px;
+      margin: 0 auto;
+    }
+    &__panel {
+      width: 350px;
+      padding: 40px 30px;
+      &__img {
+        margin-bottom: -40px;
+      }
+    }
+  }
+  @include breakpoint(md) {
+    &__panel {
+      width: auto;
+    }
+  }
+}

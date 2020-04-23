@@ -1,0 +1,60 @@
+include ~components/button/mixin
+include ~components/image/mixin
+include ~components/logo/mixin
+
+.hero.js-hero
+	.l-container
+		.hero__inner
+			.hero__main
+				.hero__head
+					h1.hero__title Хакатон Hack the&nbsp;Crisis Russia
+				.hero__body
+					p IT-сообщество HackTheCrisisRussia, Mail.ru Cloud Solutions и Ontico запускают онлайн-хакатон для разработчиков решений, которые помогут в ситуации кризиса, связанного с пандемией коронавируса.
+				.hero__footer
+					.hero__more
+						+button({mods: 'block', class: 'b24-web-form-popup-btn-37'}) Подать заявку
+			.hero__img
+				+image({src: '/images/hero/img-lg.svg'})
+				+logo({
+					mods: ['dark', 'small'],
+					class: 'hero__img__htc',
+					attributes: {
+						'data-parallax': 0.3,
+					}
+				})
+					+image({src: '/images/logo/hack-the-crisis.svg'})
+				+logo({
+					class: 'hero__img__mcs',
+					href: "https://mcs.mail.ru",
+					attributes: {
+						'data-parallax': 0.5,
+					}
+				})
+					+image({src: '/images/logo/mcs-white.svg'})
+				+logo({
+					class: 'hero__img__sponsor',
+					attributes: {
+						'data-parallax': 0.4,
+					}
+				})
+					+image({
+						src: '/images/logo/ontiko.png',
+						srcset: {
+							'2x': '/images/logo/ontiko@2x.png'
+						}
+					})
+				+logo({
+					mods: 'small',
+					class: 'hero__img__small-1',
+					attributes: {
+						'data-parallax': 0.5,
+					}
+				})
+				+logo({
+					mods: 'small',
+					class: 'hero__img__small-2',
+					attributes: {
+						'data-parallax': 0.4,
+					}
+				})
+

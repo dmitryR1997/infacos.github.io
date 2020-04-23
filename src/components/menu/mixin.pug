@@ -1,0 +1,16 @@
+include ~components/icon/mixin
+
+mixin menu(data)
+	-
+		data = data || {};
+		classList = mixinUtils.classList({ name: 'menu', add: data.class, mods: data.mods });
+	nav.menu(class=classList)&attributes(data.attributes)
+		ul
+			each item in data.menu
+				li.menu__item
+					a.menu__item-link(href=item.href)
+						+icon(item.icon)
+						| #{item.title}
+
+					if (item.icon == 'tel')
+						<a href="#" class="call-back">обратный звонок</a>

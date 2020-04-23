@@ -1,0 +1,17 @@
+.icon {
+  display: inline-block;
+  line-height: 0;
+  padding: 0;
+  color: inherit;
+  fill: currentColor;
+  stroke: none;
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+
+  &.drop-shadow {
+    filter: drop-shadow(0 0 0.5em);
+  }
+}
+
+@import "./symbol/sprite";

@@ -1,0 +1,5 @@
+@import "~common/styles/mixins/layout/container";
+
+.l-container {
+  @include container;
+}

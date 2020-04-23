@@ -1,0 +1,17 @@
+mixin lazy-image(data)
+  - data = data || {}
+  -
+    if (typeof data.srcset === 'object') {
+      srcset = []
+      for (key in data.srcset) {
+        srcset.push(`${data.srcset[key]} ${key}`)
+      }
+      data.srcset = srcset.join(',')
+    };
+  img(
+    data-src=data.src || ''
+    data-srcset=data.srcset || ''
+    data-alt=data.alt || data.title || ''
+    data-title=data.title || ''
+    class=data.class
+  )&attributes(data.attributes)

@@ -1,0 +1,19 @@
+@import '~components/breakpoints/mixin';
+
+.section {
+  padding: 30px 0;
+  position: relative;
+  background: #fff;
+
+  &.section--light-blue {
+    background-color: #D0DBED;
+  }
+
+  &.section--light-blue-gradient {
+    background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #D0DBED;
+  }
+
+  &.section--rounded {
+    border-radius: 30px;
+  }
+}

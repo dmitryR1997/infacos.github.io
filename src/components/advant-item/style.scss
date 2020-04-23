@@ -1,0 +1,29 @@
+@import "~common/styles/variables/fonts";
+@import "~common/styles/variables/transitions";
+@import "~components/breakpoints/mixin";
+
+.advant-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  transition: color $transition-time ease-out;
+
+  &__icon {
+    margin-right: 30px;
+  }
+
+  &__text {
+    line-height: 1;
+    font-weight: 700;
+    color: #3664AD;
+  }
+
+  &__text-1 {
+    font-size: 56px;
+  }
+
+  &__text-2 {
+    font-size: 32px
+  }
+}

@@ -1,0 +1,108 @@
+@import "~owl.carousel/dist/assets/owl.carousel.min.css";
+@import "~owl.carousel/dist/assets/owl.theme.default.min.css";
+@import "~common/styles/variables/transitions";
+
+.owl-carousel {
+  direction: ltr;
+
+  &.l-row {
+    display: block;
+    margin: 0 auto;
+    [class*="l-col"] {
+      padding: 0;
+      width: auto;
+      max-width: none;
+    }
+  }
+  .owl-nav {
+    direction: ltr;
+
+    button.owl-prev,
+    button.owl-next {
+      display: block;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      position: absolute;
+      top: 50%;
+      font-size: 50px;
+      width: 1em;
+      height: 2em;
+      margin-top: -1em;
+      transition: background-color $transition-time ease-out;
+
+      .icon {
+        display: block;
+        position: absolute;
+        font-size: 60px;
+        left: 50%;
+        top: 50%;
+        margin-left: -30px;
+        margin-top: -30px;
+        stroke: #3664AD;
+        stroke-width: 5px;
+        color: #FFFFFF;
+      }
+
+      &:hover {
+      }
+      &:active {
+      }
+      &[disabled],
+      &.is-disabled,
+      &.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+    button.owl-prev {
+      left: 0;
+    }
+    button.owl-next {
+      right: 0;
+    }
+  }
+  .owl-item {
+    img {
+      width: auto;
+    }
+  }
+  .owl-dots {
+    text-align: center;
+    line-height: 0;
+    font-size: 0;
+    position: relative;
+    direction: ltr;
+    margin-top: 20px;
+
+    button.owl-dot {
+      display: inline-block;
+      vertical-align: top;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      box-shadow: none;
+      transition: background $transition-time, border-color $transition-time;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      margin: 5px;
+      background: #d7d7d7;
+      border: 1px solid #d7d7d7;
+
+      &:hover {
+        border-color: #ff2a7a;
+      }
+
+      &.active {
+        background: #ff2a7a;
+        border-color: #ff2a7a;
+      }
+    }
+  }
+  .owl-drag {
+    cursor: move;
+  }
+}
+
+

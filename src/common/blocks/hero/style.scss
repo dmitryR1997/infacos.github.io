@@ -1,0 +1,100 @@
+@import "~components/breakpoints/mixin";
+
+.hero {
+  color: #B0A3FD;
+  background: #3420A3;
+  padding: 20px 0 50px 0;
+  position: relative;
+  z-index: 20;
+
+  &__head {
+    margin-bottom: 20px;
+  }
+  &__footer {
+    margin-top: 40px;
+  }
+  &__title {
+    color: #fff;
+    margin: 0;
+  }
+  &__img {
+    display: none;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    padding: 40px 15px 50px 15px;
+    &__mcs,
+    &__htc,
+    &__small-1,
+    &__small-2,
+    &__sponsor {
+      position: absolute;
+    }
+    &__mcs {
+      left: 0;
+      top: 10px;
+    }
+    &__sponsor {
+      top: 0;
+      left: 220px;
+    }
+    &__htc {
+      left: 110px;
+      top: 120px;
+    }
+    &__small-1 {
+      right: 0;
+      top: 145px;
+    }
+    &__small-2 {
+      bottom: 0;
+      left: 20px;
+    }
+  }
+
+  @include breakpoint(xs) {
+    &__more {
+      max-width: 210px;
+    }
+  }
+  @include breakpoint(sm) {
+    font-size: 24px;
+  }
+  @include breakpoint(md) {
+    padding: 20px 0;
+    border-radius: 0 0 0 80px;
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__main {
+      padding: 180px 20px 130px 0;
+      flex: 1 1 auto;
+    }
+    &__img {
+      display: block;
+      flex: 0 0 500px;
+      max-width: 500px;
+      margin-left: 20px;
+    }
+  }
+  @include breakpoint(container) {
+    &__main {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+        border-radius: 0 80px;
+        z-index: -1;
+        left: 20px;
+        top: 20px;
+        bottom: 20px;
+        right: calc((100% - 1140px) / 2 + 520px + 20px);
+        background: linear-gradient(to bottom right, rgba(#000, 0.25), rgba(#000,0));
+      }
+    }
+  }
+}

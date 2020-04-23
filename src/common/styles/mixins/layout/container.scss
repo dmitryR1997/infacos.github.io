@@ -1,0 +1,7 @@
+@import "~common/styles/variables/layout";
+
+@mixin container {
+  margin: 0 auto;
+  padding: 0 $container-padding;
+  max-width: $container-width;
+}

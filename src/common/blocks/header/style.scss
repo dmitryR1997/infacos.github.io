@@ -1,0 +1,38 @@
+@import "~common/styles/variables/transitions";
+@import "~components/breakpoints/mixin";
+@import "./styles/animations";
+
+.header {
+  position: relative;
+  background-color: #D0DBED;
+  animation-timing-function: ease-out;
+  animation-duration: $animation-time;
+  padding: 48px 0;
+
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+
+  .parallax {
+    top: 0;
+    left: 0;
+
+    img {
+      &:nth-child(1) {
+        top: -18px;
+        left: 30%;
+      }
+      &:nth-child(2) {
+        top: 30px;
+        right: 2%;
+      }
+    }
+  }
+}

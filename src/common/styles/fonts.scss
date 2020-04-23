@@ -1,0 +1,91 @@
+@import "~common/styles/variables/fonts";
+//
+//@font-face {
+//  font-family: 'TT Norms Pro';
+//  src: local('TT Norms Pro Bold'), local('TTNormsPro-Bold'),
+//  url('~static/fonts/tt_norms_pro/TTNormsPro-Bold.woff2') format('woff2'),
+//  url('~static/fonts/tt_norms_pro/TTNormsPro-Bold.woff') format('woff');
+//  font-weight: $font-weight-bold;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'TT Norms Pro';
+//  src: local('TT Norms Pro Black'), local('TTNormsPro-Black'),
+//  url('~static/fonts/tt_norms_pro/TTNormsPro-Black.woff2') format('woff2'),
+//  url('~static/fonts/tt_norms_pro/TTNormsPro-Black.woff') format('woff');
+//  font-weight: $font-weight-black;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//
+//@font-face {
+//  font-family: 'TT Norms Pro';
+//  src: local('TT Norms Pro Thin'), local('TTNormsPro-Thin'),
+//  url('~static/fonts/tt_norms_pro/TTNormsPro-Thin.woff2') format('woff2'),
+//  url('~static/fonts/tt_norms_pro/TTNormsPro-Thin.woff') format('woff');
+//  font-weight: $font-weight-thin;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'TT Norms Pro';
+//  src: local('TT Norms Pro Medium'), local('TTNormsPro-Medium'),
+//  url('~static/fonts/tt_norms_pro/TTNormsPro-Medium.woff2') format('woff2'),
+//  url('~static/fonts/tt_norms_pro/TTNormsPro-Medium.woff') format('woff');
+//  font-weight: $font-weight-medium;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('~static/fonts/Montserrat/Montserrat-Regular.eot');
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+  url('~static/fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+  url('~static/fonts/Montserrat/Montserrat-Regular.woff') format('woff'),
+  url('~static/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: $font-weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('~static/fonts/Montserrat/Montserrat-SemiBold.eot');
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+  url('~static/fonts/Montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('~static/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'),
+  url('~static/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('~static/fonts/Montserrat/Montserrat-Bold.eot');
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+  url('~static/fonts/Montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+  url('~static/fonts/Montserrat/Montserrat-Bold.woff') format('woff'),
+  url('~static/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('~static/fonts/Montserrat/Montserrat-Black.eot');
+  src: local('Montserrat Black'), local('Montserrat-Black'),
+  url('~static/fonts/Montserrat/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+  url('~static/fonts/Montserrat/Montserrat-Black.woff') format('woff'),
+  url('~static/fonts/Montserrat/Montserrat-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

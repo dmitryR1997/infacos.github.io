@@ -1,0 +1,30 @@
+include ~components/image/mixin
+include ~components/button/mixin
+
+.section-faq.js-section-faq
+	.l-container
+		.section-faq__head
+			h2.section-faq__title Как проходит онлайн-хакатон?
+		.section-faq__body
+			.l-row(data-rel="section.faq.slider")
+				.l-col-sm-6
+					article.section-faq__panel
+						.section-faq__panel__head
+							h3 Команды
+						.section-faq__panel__body
+							p Команды будут разделены на два потока по дням: у каждой команды будет один день на разработку проекта. Всем участникам, не прошедшим отбор, и заинтересованным лицам (менторам, партнерам) предоставляется возможность в live-режиме наблюдать за работой команд с помощью видеострима.
+						.section-faq__panel__footer
+							.section-faq__panel__img
+								+image({ src: '/images/section-faq/panel-1.svg' })
+				.l-col-sm-6
+					article.section-faq__panel
+						.section-faq__panel__head
+							h3 Постоянная связь с менторами
+						.section-faq__panel__body
+							p За каждой командой закрепляется ментор, с которым будет создан Telegram-чат для оперативного взаимодействия. Наставники будут помогать участникам: от проработки идеи до ее реализации.
+						.section-faq__panel__footer
+							.section-faq__panel__img
+								+image({ src: '/images/section-faq/panel-2.svg' })
+		.section-faq__footer
+			.section-faq__more
+				+button({ mods: 'block', class: 'b24-web-form-popup-btn-37' }) Подать заявку

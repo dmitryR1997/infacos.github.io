@@ -1,0 +1,13 @@
+.parallax {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  img {
+    position: absolute;
+  }
+}
+
+[data-parallax] {
+  will-change: transform;
+}

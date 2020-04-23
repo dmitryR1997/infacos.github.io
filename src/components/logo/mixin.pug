@@ -1,0 +1,8 @@
+mixin logo(data)
+	-
+		data = data || {};
+		url = data.attributes && data.attributes.href || data.href;
+		tagName = url ? 'a' : 'div';
+		classList = mixinUtils.classList({name: 'logo', add: data.class, mods: data.mods})
+	#{tagName}.logo(class=classList href=url)&attributes(data.attributes)
+		block

@@ -1,0 +1,64 @@
+variables:
+    S3_BUCKET_FOLDER: master
+    GIT_STRATEGY: fetch
+
+image: openkbs/jdk-mvn-py3:latest
+
+stages:
+    - install_deps
+    - build
+    - deploy
+
+install_deps:
+    stage: install_deps
+    tags:
+        - mcs
+    only:
+        - master
+    cache:
+        key: ${CI_COMMIT_REF_SLUG}
+        paths:
+            - node_modules/
+    before_script:
+        - sudo -H apt-get install libpng-dev -y --no-install-recommends
+    script:
+        - npm install --no-audit --prefer-offline
+
+build_master:
+    stage: build
+    dependencies:
+        - install_deps
+    tags:
+        - mcs
+    only:
+        - master
+    cache:
+        key: ${CI_COMMIT_REF_SLUG}
+        paths:
+            - node_modules/
+        policy: pull
+    before_script:
+      - sudo -H apt-get install libpng-dev -y --no-install-recommends
+    script:
+        - npm run build-prod
+    artifacts:
+        paths:
+            - build/
+
+deploy_hackthecrisisrussiaru:
+    stage: deploy
+    dependencies:
+        - build_master
+    tags:
+        - mcs
+    only:
+        - master
+    variables:
+        GIT_STRATEGY: none
+    environment:
+        name: HackTheCrisisRussia.ru
+        url: https://hackthecrisisrussia.ru/
+    before_script:
+        - sudo -H pip install awscli
+    script:
+        - aws s3 cp build/ s3://$S3_BUCKET_NAME/$S3_BUCKET_FOLDER/ --recursive --endpoint-url https://hb.bizmrg.com --metadata-directive REPLACE --acl public-read --cache-control max-age=86400

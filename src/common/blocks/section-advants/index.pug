@@ -1,0 +1,23 @@
+include ~components/advant-item2/mixin
+
+.section-advants.js-section-advants
+	.l-container
+		-
+			items = [
+				{
+					icon: '/images/section-advants/advant-1.svg',
+					text: 'Простое подключение <br> телевизоров',
+				},
+				{
+					icon: '/images/section-advants/advant-2.svg',
+					text: 'Показывает на всех<br>телевизорах в квартире',
+				},
+				{
+					icon: '/images/section-advants/advant-3.svg',
+					text: 'Изображение<br>высокого качества',
+				}
+			]
+
+		.section-advants__body
+			each item in items
+				+advant-item2(item)

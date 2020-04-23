@@ -1,0 +1,20 @@
+include ~components/title-with-icon/mixin
+include ~components/image/mixin
+include ~components/button/mixin
+
+.section-gift.js-section-banner
+	.l-container
+		.section-gift__body
+			.l-row
+				.l-col-sm-auto
+					+title-with-icon({
+						title: 'Спецпредложение',
+						icon: '/images/section-gift/gift-min.svg'
+					})
+
+					.section-gift__title При оплате на год<br>— 1 месяц бесплатно
+
+					.section-gift__join
+						+button({}) Подключится
+
+				+image({src: 'images/section-gift/gift-big.svg', class: 'section-gift__image'})

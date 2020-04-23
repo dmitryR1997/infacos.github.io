@@ -1,0 +1,39 @@
+.section-contacts {
+  &__title {
+    margin: 0 0 40px
+  }
+}
+
+.contacts-card {
+  padding-left: 70px;
+  font-size: 24px;
+  font-weight: 600;
+
+  &__logo {
+    margin: 0 0 37px;
+  }
+
+  &__address {
+    margin: 0 0 37px;
+  }
+
+  &__tel {
+    margin: 0 0 15px;
+  }
+
+  &__help-service {
+    font-size: 18px;
+    color: #3664AD;
+    margin: 0 0 25px;
+  }
+
+  &__email {
+    margin-top: 37px;
+  }
+
+  a {
+    color: #1E202F;
+  }
+}
+
+

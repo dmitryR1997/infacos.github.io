@@ -1,0 +1,55 @@
+include ~components/table/mixin
+
+.section-time
+	.l-container
+		.section-time__head
+			h2.section-time__title Тайминг
+		.section-time__body
+			.l-row
+				.l-col-md-4
+					+table({ class: 'section-time__item' })
+						thead
+							tr
+								th(colspan=2) Этап I - подготовка
+						tbody
+							tr
+								td
+									.section-time__date 13-27 апреля
+								td Сбор заявок
+							tr
+								td
+									.section-time__date 30 апреля
+								td Объявление результатов отбора команд/участников
+				.l-col-md-4
+					+table({ class: 'section-time__item' })
+						thead
+							tr
+								th(colspan=2) Этап II - полуфинал
+						tbody
+							tr
+								td
+									.section-time__date 5-6 мая
+								td Проработка проекта при поддержке ментора
+							tr
+								td
+									.section-time__date 7 мая
+								td Питч проекта экспертному жюри
+							tr
+								td
+									.section-time__date 8 мая
+								td Отбор финалистов
+
+				.l-col-md-4
+					+table({ class: 'section-time__item' })
+						thead
+							tr
+								th(colspan=2) Этап III - финал
+						tbody
+							tr
+								td
+									.section-time__date 16-17 мая
+								td Создание прототипа проекта при поддержке ментора
+							tr
+								td
+									.section-time__date 18 мая
+								td Защита проекта экспертному жюри на финале

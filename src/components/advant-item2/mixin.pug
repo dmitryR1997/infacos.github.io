@@ -1,0 +1,9 @@
+include ~components/image/mixin
+
+mixin advant-item2(data)
+	-
+		data = data || {};
+	.advant-item-v2
+		.advant-item-v2__icon
+			+image({src: data.icon})
+		.advant-item-v2__text !{data.text}

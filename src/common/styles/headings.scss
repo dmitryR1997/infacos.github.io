@@ -1,0 +1,45 @@
+@import "~common/styles/variables/fonts";
+@import "~common/styles/variables/colors";
+@import "~components/breakpoints/mixin";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family-headings;
+  line-height: $line-height-headings;
+  font-weight: $font-weight-headings;
+  margin: 0 0 0.5em 0;
+}
+
+h1,
+.h1 {
+  font-size: $font-size-h1-xs;
+  @include breakpoint(xs) {
+    font-size: $font-size-h1;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $font-size-h2-xs;
+  @include breakpoint(xs) {
+    font-size: $font-size-h2;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $font-size-h3-xs;
+  @include breakpoint(xs) {
+    font-size: $font-size-h3;
+  }
+}

@@ -1,0 +1,12 @@
+include ~components/image/mixin
+
+mixin title-with-icon(data)
+	-
+		data = data || {};
+	.title-with-icon
+		h2.title-with-icon__h2
+			span.title-with-icon__h2-text !{data.title}
+			span.title-with-icon__h2-icon
+				+image({src: data.icon})
+		if data.description
+			p.title-with-icon__description !{data.description}

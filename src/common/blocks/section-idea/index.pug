@@ -1,0 +1,26 @@
+include ~components/list-item/mixin
+
+-
+	items = [
+		'Направленные на решение актуальных проблем, связанных с коронавирусом',
+		'Хорошо масштабируемые и адаптируемые к меняющимся условиям',
+		'Экономически реализуемые без привлечения сторонних средств',
+		'Отвечающие потребностям современного общества',
+	]
+
+.section-idea
+	.l-container
+		.section-idea__head
+			h2.section-idea__title К подаче принимаются идеи:
+		.section-idea__body
+			.l-row
+				.l-col-sm-6
+					.section-idea__item
+						+list-item({ index: 1 }) #{items[0]}
+					.section-idea__item
+						+list-item({ index: 2 }) #{items[1]}
+				.l-col-sm-6
+					.section-idea__item
+						+list-item({ index: 3 }) #{items[2]}
+					.section-idea__item
+						+list-item({ index: 4 }) #{items[3]}

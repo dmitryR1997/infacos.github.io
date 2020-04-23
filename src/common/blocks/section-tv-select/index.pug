@@ -1,0 +1,13 @@
+include ~components/title-with-icon/mixin
+include ~components/button/mixin
+
+.section-tv-select.js-section-tv-select
+	.l-container
+		+title-with-icon({
+			title: '59 аналоговых и более 100 цифровых<br>телеканалов',
+			icon: '/images/section-tv-select/tv-love.svg',
+		})
+
+		.section-tv-select__buttons
+			+button('') Аналоговое тв
+			+button('') Цифровое тв

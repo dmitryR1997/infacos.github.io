@@ -1,0 +1,8 @@
+mixin button(data)
+	-
+		data = data || {};
+		url = data.attributes && data.attributes.href || data.href;
+		tagName = url ? 'a' : 'button';
+		classList = mixinUtils.classList({ name:'button', add: data.class, mods: data.mods })
+	#{tagName}.button(class=classList href=url)&attributes(data.attributes)
+		block

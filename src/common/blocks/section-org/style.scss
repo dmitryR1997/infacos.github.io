@@ -1,0 +1,72 @@
+@import "~components/breakpoints/mixin";
+
+.section-org {
+  &__head {
+    margin-bottom: 20px;
+  }
+  &__footer {
+    margin-top: 40px;
+  }
+  &__img,
+  &__img-xs {
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    margin: 20px auto;
+  }
+  &__img {
+    display: none;
+    max-width: 550px;
+    position: relative;
+    &__mcs,
+    &__htc,
+    &__sponsor, {
+      position: absolute;
+    }
+    &__mcs {
+      top: -30px;
+      left: 30px;
+    }
+    &__sponsor {
+      top: 0;
+      left: 230px;
+    }
+    &__htc {
+      top: 60px;
+      left: 140px;
+    }
+  }
+
+  @include breakpoint(xs) {
+    &__more {
+      margin: 0 auto;
+      max-width: 210px;
+    }
+    &__img {
+      display: block;
+      margin: 100px auto 20px auto;
+    }
+    &__img-xs {
+      display: none;
+    }
+  }
+  @include breakpoint(md) {
+    &__inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+    }
+    &__main {
+      flex: 1 1 auto;
+      max-width: none;
+    }
+    &__img {
+      flex: 0 0 550px;
+      margin: 0 -80px 0 0;
+    }
+    &__more {
+      margin: 0;
+    }
+  }
+}

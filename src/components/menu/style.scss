@@ -1,0 +1,63 @@
+@import "~common/styles/variables/transitions";
+@import "~components/breakpoints/mixin";
+
+.menu {
+  font-size: 1em;
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0 0 2px;
+    transition: color $transition-time ease-out;
+  }
+
+  &__item-link {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    &:hover,
+    &.is-active {
+      opacity: 0.8;
+    }
+  }
+
+  .call-back {
+    position: absolute;
+    margin-left: 28px;
+  }
+
+  @include breakpoint(sm) {
+    ul {
+      margin: 0 -25px;
+      li {
+        padding: 0 25px;
+      }
+    }
+  }
+}
+
+.call-back {
+  font-size: 12px;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  transition: border-color $transition-time ease-out;
+
+  &:hover {
+    border-color: transparent;
+  }
+}

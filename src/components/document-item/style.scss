@@ -1,0 +1,17 @@
+@import "~common/styles/variables/fonts";
+@import "~common/styles/variables/transitions";
+@import "~components/breakpoints/mixin";
+
+.document-item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1E202F;
+  margin: 20px 0;
+
+  &__icon {
+    margin-right: 26px;
+    flex: 0 0 30px;
+  }
+}

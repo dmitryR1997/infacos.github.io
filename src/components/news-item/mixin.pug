@@ -1,0 +1,11 @@
+include ~components/image/mixin
+
+mixin news-item(data)
+	-
+		data = data || {};
+	.news-item
+		.news-item__title #{data.title}
+		.news-item__date #{data.date}
+		.news-item__description #{data.description}
+		a(href=`${data.href}`).news-item__href Читать
+

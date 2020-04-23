@@ -1,0 +1,22 @@
+include ~common/templates/constants
+include ~common/templates/functions/mixin-utils
+
+block variables
+	include ~common/templates/variables
+doctype html
+html(lang='ru')
+	head
+		block head
+			title #{TITLE}
+			include ~common/templates/meta
+			include ~common/templates/favicon
+			include ~common/templates/counters/gtag
+			link(rel='canonical' href=URL)
+			block stylesheets
+				link(rel="stylesheet" href=`index.css?${ASSETS_VERSION}`)
+	body
+		include ~common/templates/counters/gtag-no-script
+		block body
+		include ~components/icon/sprite
+		block scripts
+			script(src=`index.js?${ASSETS_VERSION}`)

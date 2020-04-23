@@ -1,0 +1,17 @@
+@import "~common/styles/variables/fonts";
+@import "~common/styles/variables/transitions";
+@import "~components/breakpoints/mixin";
+
+.advant-item-v2 {
+  text-align: center;
+
+  &__icon {
+    margin: 0 0 58px;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1E202F;
+  }
+}

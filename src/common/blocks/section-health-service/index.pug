@@ -1,0 +1,19 @@
+include ~components/title-with-icon/mixin
+include ~components/image/mixin
+include ~components/button/mixin
+
+.section-health-service.js-section-health-service
+	.l-container
+		.l-row
+			.l-col-sm-8
+				+title-with-icon({
+					title: 'Служба заботы',
+					icon: '/images/section-health-service/eye.svg',
+					description: 'Наслаждайтесь отдыхом, все хлопоты мы возьмём на себя'
+				})
+
+				.section-health-service__text Для любимого пользователя, который исправно оплачивает наши услуги<br>и не допускает наличия задолженности, мы бесплатно выполним любые<br>работы, связанные с телевидением в квартире. Поиск неисправностей,<br>настройка ТВ, замена кабеля и розеток!*
+
+				.section-health-service__sub-text * Стоимость материалов оплачивается отдельно
+			.l-col-sm-4
+				+image({src: 'images/section-health-service/bg.svg', class: 'section-health-service__image'})

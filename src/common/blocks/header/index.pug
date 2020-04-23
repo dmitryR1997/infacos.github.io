@@ -1,0 +1,14 @@
+include ~components/image/mixin
+include ~components/button/mixin
+
+header.header.js-header#header
+	.parallax
+		+image({src: '/images/header/parallax-1.svg'})
+		+image({src: '/images/header/parallax-2.svg'})
+	.l-container
+		.header__top
+			.header__logo
+				+image({src: '/images/logo/header-logo.svg'})
+			.header__nav
+				include ~common/blocks/menu-main/index
+

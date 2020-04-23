@@ -1,0 +1,44 @@
+include ~components/lazy-image/mixin
+
+-
+	items = [
+		{
+			image: {
+				src: '/images/logo/epam.svg',
+				href: 'https://www.epam-group.ru/',
+			}
+		},
+		{
+			image: {
+				src: '/images/logo/helm.jpg',
+				href: 'https://t.me/k8s_mail'
+			}
+		},
+		{
+			image: {
+				src: '/images/logo/rebrain.png',
+				href: 'https://rebrainme.com'
+			}
+		},
+		{
+			image: {
+				src: 'images/logo/feulake.jpg',
+				href: 'https://fevlake.com'
+			}
+		},
+	]
+
+.section-partners.js-section-partners
+	.l-container
+		.section-partners__head
+			h2.section-partners__title Партнеры хакатона
+		.section-partners__body
+			.section-partners__list(data-rel="section.partners.slider")
+				each item in items
+					.section-partners__list-item
+						a.section-partners__item(href=`${item.image.href}` target="_blank")
+							+lazy-image({
+								class: 'js-lazy-img',
+								src: item.image.src,
+								srcset: item.image.srcset,
+							})

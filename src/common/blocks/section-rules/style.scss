@@ -1,0 +1,42 @@
+@import "~components/breakpoints/mixin";
+
+.section-rules {
+  &__head {
+    margin-bottom: 20px;
+  }
+  &__aside {
+    display: none;
+  }
+  &__date {
+    margin-bottom: 60px;
+    p {
+      margin: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__date-title {
+    font-size: 40px;
+    font-weight: $font-weight-medium;
+  }
+
+  @include breakpoint(sm) {
+    &__body {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &__main {
+      flex: 0 1 630px;
+      max-width: 630px;
+      margin-right: auto;
+    }
+    &__aside {
+      display: block;
+      margin-left: 40px;
+      flex: 0 0 250px;
+      max-width: 250px;
+    }
+  }
+}

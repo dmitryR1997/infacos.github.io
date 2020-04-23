@@ -1,0 +1,14 @@
+-
+	mixinUtils = {
+		classList({ name = '', add = '', mods = '' }) {
+			if (!name) {
+				return '';
+			}
+			const classMods = [].concat(mods).map(mod => {
+				if (mod) {
+					return `${name}--${mod}`;
+				}
+			});
+			return [].concat(add).concat(classMods).join(' ').trim();
+		},
+	}

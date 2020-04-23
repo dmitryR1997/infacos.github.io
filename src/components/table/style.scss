@@ -1,0 +1,59 @@
+@import "~components/breakpoints/mixin";
+
+.table {
+  overflow: auto;
+  table {
+    width: auto;
+    border: none;
+    min-width: 100%;
+    border-collapse: collapse;
+  }
+  thead {
+    th,
+    td {
+      &:first-child {
+        border-bottom-left-radius: 10px;
+      }
+      &:last-child {
+        border-top-right-radius: 10px;
+      }
+    }
+  }
+  tbody {
+    th,
+    td {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  th,
+  td {
+    vertical-align: top;
+  }
+  th {
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: $font-weight-medium;
+    background: #EDEAFF;
+    padding: 10px;
+    text-align: center;
+  }
+  td {
+    padding: 30px 10px 0 10px;
+  }
+
+  @include breakpoint(sm) {
+    th,
+    td {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    th {
+      font-size: 24px;
+    }
+  }
+}

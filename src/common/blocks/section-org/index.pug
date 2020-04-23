@@ -1,0 +1,49 @@
+include ~components/button/mixin
+include ~components/image/mixin
+
+.section-org.js-section-org
+	.l-container
+		.section-org__head
+			h2.section-org__title Организаторы
+		.section-org__inner
+			.section-org__img-xs
+				+image({src: '/images/section-org/img-xs.svg'})
+			.section-org__img
+				+image({src: '/images/section-org/img-peoples.svg'})
+				+logo({
+					mods: ['dark', 'xs'],
+					class: 'section-org__img__htc',
+					attributes: {
+						'data-parallax': 0.25,
+					}
+				})
+					+image({src: '/images/logo/hack-the-crisis.svg'})
+				+logo({
+					class: 'section-org__img__mcs',
+					href: "https://mcs.mail.ru",
+					attributes: {
+						'data-parallax': 0.35,
+					}
+				})
+					+image({src: '/images/logo/mcs-white.svg'})
+				+logo({
+						mods: 'small',
+						class: 'section-org__img__sponsor',
+						attributes: {
+							'data-parallax': 0.3,
+						}
+					})
+						+image({
+							src: '/images/logo/ontiko.png',
+							srcset: {
+								'2x': '/images/logo/ontiko@2x.png'
+							}
+						})
+			.section-org__main
+				.section-org__body
+					p Хакатон проводится при поддержке IT-сообщества <strong>HackTheCrisisRussia</strong>, облачной платформы <strong>Mail.ru Cloud Solutions</strong>, лучших докладчиков конференции Highload++ и компании <strong>Ontico</strong> («Конференции Олега Бунина»).
+					p Эксперты проведут отбор заявок и обеспечат менторскую поддержку участникам на всех этапах хакатона.
+					p На финальных этапах участникам хакатона будет предоставлена облачная инфраструктура <strong>Mail.ru Cloud Solutions</strong> для разработки решений.
+				.section-org__footer
+					.section-org__more
+						+button({ mods: 'block', class: 'b24-web-form-popup-btn-37'}) Подать заявку

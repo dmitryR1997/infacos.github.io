@@ -1,0 +1,48 @@
+.section-banner {
+  &__bg {
+    background-image: url("/images/section-banner/bg.svg");
+    background-repeat: no-repeat;
+    background-position: top 50px right;
+  }
+
+  &__title {
+    margin: 0 0 26px;
+  }
+
+  &__sub-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #3664AD;
+    margin: 0 0 150px;
+  }
+
+  &__advants {
+    margin: 0 0 88px;
+  }
+
+  .advant-item {
+    margin-right: 128px;
+  }
+
+  .l-container {
+    position: relative;
+  }
+
+  .parallax {
+    height: 100%;
+
+    img {
+      &:nth-child(1) {
+        right: 100%;
+        bottom: 20%;
+      }
+
+      &:nth-child(2) {
+        right: -7%;
+        bottom: -5%;
+      }
+    }
+  }
+}
+
+

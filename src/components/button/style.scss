@@ -1,0 +1,40 @@
+@import "~common/styles/variables/fonts";
+@import "~common/styles/variables/transitions";
+@import "~common/styles/mixins/appearance";
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  border: none;
+  color: #fff;
+  background: #3664AD;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 20px 60px;
+  border-radius: 30px;
+  transition: background-color $transition-time ease-out;
+  @include no-appearance();
+  &:hover {
+    background-color: darken(#FF297A, 10%);
+  }
+  &:active {
+    background-color: darken(#FF297A, 15%);
+  }
+  &[disabled],
+  &.is-disabled {
+    background-color: lighten(#FF297A, 15%);
+    cursor: not-allowed;
+  }
+
+  &.button--block {
+    display: block;
+    width: 100%;
+  }
+}

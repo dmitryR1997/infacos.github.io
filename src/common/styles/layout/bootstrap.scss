@@ -1,0 +1,12 @@
+@import "~common/styles/variables/breakpoints";
+@import "~common/styles/mixins/layout/bootstrap-grid";
+
+.l-row {
+  @include make-row();
+}
+
+@include make-grid-columns(
+  $columns: $bootstrap-columns,
+  $gutter: $bootstrap-gutter,
+  $breakpoints: $breakpoints
+);

@@ -1,0 +1,7 @@
+mixin section(data)
+	-
+		data = data || {};
+		id = data.id || data.attributes.id;
+		classList = mixinUtils.classList({name: 'section', add: data.class, mods: data.mods})
+	section.section(class=classList id=id)&attributes(data.attributes)
+		block

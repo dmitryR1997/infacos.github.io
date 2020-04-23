@@ -1,0 +1,42 @@
+include ~components/title-with-icon/mixin
+include ~components/document-item/mixin
+
+.section-documents.js-section-documents
+	.l-container
+		+title-with-icon({
+			title: 'Документы',
+			icon: '/images/section-documents/docs.svg',
+		})
+
+		-
+			items = [
+				{
+					title: 'Договор-оферта',
+					href: '20.03.2020',
+				},
+				{
+					title: 'Заявление о заключении договора',
+					href: '18.03.2020',
+				},
+				{
+					title: 'Заявление о расторжении договора',
+					href: '20.03.2020',
+				},
+				{
+					title: 'Лицензия на оказание услуг связи для целей кабельного вещания',
+					href: '18.03.2020',
+				},
+				{
+					title: 'Лицензия на оказание телематических услуг связи',
+					href: '18.03.2020',
+				},
+				{
+					title: 'Лицензия на оказание услуг связи для целей проводного радиовещания',
+					href: '18.03.2020',
+				},
+			]
+
+		.l-row
+			each item in items
+				.l-col-sm-4
+					+document-item(item)

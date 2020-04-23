@@ -1,0 +1,32 @@
+include ~components/advant-item/mixin
+include ~components/image/mixin
+include ~components/button/mixin
+
+.section-banner.js-section-banner
+	.l-container
+		.parallax
+			+image({ src: '/images/section-banner/parallax-1.svg' })
+			+image({ src: '/images/section-banner/parallax-2.svg' })
+		.section-banner__bg
+			h1.section-banner__title Кабельное телевидение<br>в Москве и области
+			p.section-banner__sub-title Лучшее предложение на рынке<br>для наших абонентов
+
+			-
+				items = [
+					{
+						icon: '/images/section-banner/channels.svg',
+						text_1: '150+',
+						text_2: 'каналов'
+					},
+					{
+						icon: '/images/section-banner/wallet.svg',
+						text_1: 'от 120₽',
+						text_2: 'в месяц'
+					}
+				]
+			.section-banner__advants
+				each item in items
+					+advant-item(item)
+
+			.section-banner__join
+				+button({mods: '', class: ''}) Подключиться

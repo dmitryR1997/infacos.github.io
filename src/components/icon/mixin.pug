@@ -1,0 +1,7 @@
+mixin icon(name, data)
+	-
+		data = data || {};
+		classList = `icon icon-${name}`;
+		classList += mixinUtils.classList({name: 'icon', add: data.class, mods: data.mods})
+	svg(class=classList)&attributes(data.attributes)
+		use(xlink:href=`#icon-${name}`)

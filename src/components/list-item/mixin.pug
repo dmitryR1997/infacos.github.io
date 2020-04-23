@@ -1,0 +1,7 @@
+mixin list-item(data)
+	-
+		data = data || {};
+		index = data.index !== undefined ? data.index : 0;
+		classList = mixinUtils.classList({name: 'list-item', add: data.class, mods: data.mods})
+	.list-item(class=classList data-index=index)&attributes(data.attributes)
+		block

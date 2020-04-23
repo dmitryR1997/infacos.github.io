@@ -1,0 +1,27 @@
+@import "~common/styles/variables/fonts";
+@import "~components/breakpoints/mixin";
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1em;
+  color: #000;
+  &::before {
+    content: attr(data-index);
+    display: block;
+    flex: 0 0 auto;
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: $font-weight-bold;
+    background: #EFEFEF;
+    border-radius: 0 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+}

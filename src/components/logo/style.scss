@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  color: #fff;
+  background: #4633B3;
+  padding: 15px;
+  border-radius: 0 15px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+
+  &.logo--small {
+    width: 100px;
+    height: 100px;
+  }
+  &.logo--xs {
+    width: 80px;
+    height: 80px;
+  }
+  &.logo--dark {
+    background: #3420A3;
+  }
+}

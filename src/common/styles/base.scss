@@ -1,0 +1,94 @@
+@import "~common/styles/variables/colors";
+@import "~common/styles/variables/fonts";
+@import "~common/styles/mixins/placeholder";
+@import "~components/breakpoints/mixin";
+
+body,
+html {
+  font-family: $font-family-base;
+  color: $color-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  background: $body-background;
+  font-size: $font-size-base;
+}
+
+small,
+.small {
+  color: inherit;
+  font-size: 75%;
+}
+
+b,
+strong {
+  font-weight: $font-weight-medium;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $color-links;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+ul,
+ol {
+  margin: 1em 0;
+  padding-left: 1em;
+
+  li {
+    margin: 0 0 0.5em 0;
+  }
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+.is-error {
+  border-color: $color-error;
+}
+
+.is-disabled,
+[disabled] {
+  cursor: not-allowed;
+  border-color: $color-disabled;
+}
+
+.is-success {
+  border-color: $color-success;
+}
+
+.is-loading {
+  cursor: progress;
+}
+
+input[type="text"],
+textarea {
+  margin: 0 0 30px;
+  padding: 14px 0;
+  outline: none;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #1E202F;
+  @include placeholder {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1E202F;
+  }
+}
+
+textarea {
+  padding: 14px;
+  border: 2px solid #1E202F;
+}

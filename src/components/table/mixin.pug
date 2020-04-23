@@ -1,0 +1,7 @@
+mixin table(data)
+	-
+		data = data || {};
+		classList = mixinUtils.classList({name: 'table', add: data.class, mods: data.mods})
+	.table(class=classList)&attributes(data.attributes)
+		table
+			block

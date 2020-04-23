@@ -1,0 +1,9 @@
+include ~components/image/mixin
+
+mixin document-item(data)
+	-
+		data = data || {};
+	a(href="#").document-item
+		.document-item__icon
+			+image({src: '/images/section-documents/doc.svg'})
+		.document-item__text #{data.title}
